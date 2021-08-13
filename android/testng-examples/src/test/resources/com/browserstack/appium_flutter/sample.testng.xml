@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel" thread-count="2" parallel="tests">
+    <test name="ParallelTestPixel3">
+        <parameter name="device" value="Google Pixel 5"/>
+        <parameter name="os_version" value="11.0"/>
+        <classes>
+            <class name="com.browserstack.appium_flutter.SampleTest"/>
+        </classes>
+    </test>
+
+    <test name="ParallelTestGalaxy10e">
+        <parameter name="device" value="Samsung Galaxy S9 Plus"/>
+        <parameter name="os_version" value="9.0"/>
+        <classes>
+            <class name="com.browserstack.appium_flutter.SampleTest"/>
+        </classes>
+    </test>
+</suite>

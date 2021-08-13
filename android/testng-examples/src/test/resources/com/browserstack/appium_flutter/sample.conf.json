@@ -1,0 +1,15 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "username": "BROWSERSTACK_USERNAME",
+  "access_key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "project": "TestNg Appium Flutter Sample",
+    "build": "TestNg Appium Flutter Sample",
+    "name": "sample_test",
+    "browserstack.debug": true,
+    "app": "bs://<app-id>",
+    "automationName": "Flutter",
+    "browserstack.appium_version": "1.21.0"
+  }
+}
