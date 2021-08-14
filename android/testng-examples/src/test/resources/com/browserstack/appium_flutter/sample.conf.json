@@ -10,6 +10,8 @@
     "browserstack.debug": true,
     "app": "bs://<app-id>",
     "automationName": "Flutter",
-    "browserstack.appium_version": "1.21.0"
+    "browserstack.appium_version": "1.21.0",
+    "autoDismissAlerts": true,
+    "autoGrantPermissions": true
   }
 }
