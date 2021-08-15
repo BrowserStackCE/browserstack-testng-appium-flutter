@@ -10,6 +10,17 @@ public class SampleTest extends BaseTestClass {
     public void basicTest () {
         //Start Writing Test Case Here
         //driver & find is available using inheritance
-        Assert.assertTrue(1==1);
+
+        // driver.get("BrowserStack"); => the driver instance can be used in this way, if needed
+        Assert.assertTrue(1==1); // Your test assertion would come here
+    }
+
+    @Test
+    public void dummyTest () {
+        //Start Writing Test Case Here
+        //driver & find is available using inheritance
+
+        // driver.get("BrowserStack"); => the driver instance can be used in this way, if needed
+        Assert.assertTrue(1<2); // Your test assertion would come here
     }
 }

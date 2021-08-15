@@ -8,7 +8,7 @@
     "build": "TestNg Appium Flutter Sample",
     "name": "sample_test",
     "browserstack.debug": true,
-    "app": "bs://<app-id>",
+    "app": "<YOUR_APP_ID>",
     "automationName": "Flutter",
     "browserstack.appium_version": "1.21.0",
     "autoDismissAlerts": true,
