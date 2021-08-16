@@ -54,10 +54,8 @@ public class BaseTestClass {
         }
 
         String app = System.getenv("BROWSERSTACK_APP_ID");
-        if (app == null) {
-            app = (String) ((Map<?, ?>) config.get("capabilities")).get("app");
-        } else {
-            capabilities.setCapability("app", app);
+        if(app != null){
+            capabilities.setCapability("app",app);
         }
 
         driver = new AndroidDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
