@@ -8,9 +8,8 @@
     "build": "TestNg Appium Flutter Sample",
     "name": "sample_test",
     "browserstack.debug": true,
-    "app": "<YOUR_APP_ID>",
-    "automationName": "Flutter",
-    "browserstack.appium_version": "1.21.0",
-    "autoGrantPermissions": true
+    "app_android": "<YOUR_ANDROID_APP_ID>",
+    "app_ios":"<YOUR_IOS_APP_ID>",
+    "automationName": "Flutter"
   }
 }
