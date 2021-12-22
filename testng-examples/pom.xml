@@ -22,7 +22,7 @@
     <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
-        <version>7.3.0</version>
+        <version>7.4.0</version>
     </dependency>
     <dependency>
         <groupId>io.appium</groupId>
@@ -42,7 +42,7 @@
     <dependency>
         <groupId>com.browserstack</groupId>
         <artifactId>browserstack-local-java</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.6</version>
     </dependency>
     <dependency>
         <groupId>com.googlecode.json-simple</groupId>
