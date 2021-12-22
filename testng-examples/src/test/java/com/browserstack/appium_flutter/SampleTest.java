@@ -2,7 +2,8 @@ package com.browserstack.appium_flutter;
 
 import io.appium.java_client.MobileElement;
 
-import org.testng.Assert;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.testng.annotations.Test;
 
 /**
@@ -17,7 +18,6 @@ public class SampleTest extends BaseTestClass {
     public void CounterTest() {
         String buttonFinderKey = "increment";
         MobileElement counterTextFinder = find.byValueKey("counter");
-        MobileElement buttonFinder = waitFor(buttonFinderKey);
         assertEquals(counterTextFinder.getText(), "0");
         clickToElement(buttonFinderKey);
         clickToElement(buttonFinderKey);

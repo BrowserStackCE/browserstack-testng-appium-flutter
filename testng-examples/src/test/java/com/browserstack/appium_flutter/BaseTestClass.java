@@ -9,8 +9,8 @@ import com.testsigma.flutter.FlutterFinder;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -31,9 +31,9 @@ public class BaseTestClass {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
-        Iterator it = commonCapabilities.entrySet().iterator();
+        Iterator<Map.Entry<String,String>> it = commonCapabilities.entrySet().iterator();
         while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
+            Map.Entry<String,String> pair = (Map.Entry<String,String>) it.next();
             if (capabilities.getCapability(pair.getKey().toString()) == null) {
                 capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
             }
@@ -53,7 +53,8 @@ public class BaseTestClass {
         if (accessKey == null) {
             accessKey = (String) config.get("access_key");
         }
-
+        capabilities.setCapability("user", username);
+        capabilities.setCapability("key", accessKey);
         String android_app = System.getenv("BROWSERSTACK_ANDROID_APP_ID");
         String ios_app = System.getenv("BROWSERSTACK_IOS_APP_ID");
         if (os.toLowerCase() == "android") {
@@ -69,8 +70,8 @@ public class BaseTestClass {
             capabilities.setCapability("app",ios_app);
         }
 
-        driver = new AndroidDriver(
-                new URL("https://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"),
+        driver = new AndroidDriver<MobileElement>(
+                new URL(config.get("server") + "/wd/hub"),
                 capabilities);
         find = new FlutterFinder(driver);
     }
